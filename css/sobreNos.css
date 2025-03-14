@@ -80,7 +80,6 @@ nav {
     font-weight: 800;
 }
 
-
 /* Estilos da Seção Sobre Nós */
 .about-us {
     padding: 80px 20px;
@@ -169,8 +168,8 @@ nav {
 
 .fun-gallery__grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas */
+    gap: 20px; /* Espaçamento entre os cards */
 }
 
 .fun-card {
@@ -210,7 +209,6 @@ nav {
     line-height: 1.6;
 }
 
-
 /* Estilos do footer */
 footer {
     background-color: rgba(35, 38, 55, 0.8);
@@ -224,4 +222,110 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .fun-gallery__grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
+    }
+}
+
+@media (max-width: 768px) {
+    .nav__container {
+        width: 90%; /* Reduz a largura do container */
+    }
+
+    .nav__links {
+        gap: 1rem; /* Reduz o espaçamento entre os links */
+    }
+
+    .nav__links .logo {
+        font-size: 1.2rem; /* Reduz o tamanho do logo */
+    }
+
+    .nav__links a svg {
+        height: 24px; /* Reduz o tamanho dos ícones */
+    }
+
+    .about-us {
+        padding: 60px 20px; /* Reduz o padding */
+    }
+
+    .about-us__title {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    .about-us__content {
+        flex-direction: column; /* Coloca a imagem e o texto em coluna */
+        gap: 20px; /* Reduz o espaçamento */
+    }
+
+    .about-us__image img {
+        max-width: 100%; /* Garante que a imagem não ultrapasse a largura da tela */
+    }
+
+    .about-us__text {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+
+    .fun-gallery__title {
+        font-size: 1.8rem; /* Reduz o tamanho do título */
+    }
+
+    .fun-gallery__subtitle {
+        font-size: 1rem; /* Reduz o tamanho do subtítulo */
+    }
+
+    .fun-gallery__grid {
+        grid-template-columns: 1fr; /* Coloca os cards em uma única coluna */
+    }
+
+    .fun-card__image {
+        height: 150px; /* Reduz a altura da imagem */
+    }
+
+    .fun-card__title {
+        font-size: 1.2rem; /* Reduz o tamanho do título do card */
+    }
+
+    .fun-card__description {
+        font-size: 0.9rem; /* Reduz o tamanho da descrição do card */
+    }
+}
+
+@media (max-width: 480px) {
+    .nav__links {
+        flex-direction: column; /* Coloca os links em coluna */
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .nav__links a {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte dos links */
+    }
+
+    .about-us__title {
+        font-size: 1.8rem; /* Reduz ainda mais o tamanho do título */
+    }
+
+    .about-us__text {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte do texto */
+    }
+
+    .fun-gallery__title {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    .fun-gallery__subtitle {
+        font-size: 0.9rem; /* Reduz o tamanho do subtítulo */
+    }
+
+    .fun-card__title {
+        font-size: 1rem; /* Reduz o tamanho do título do card */
+    }
+
+    .fun-card__description {
+        font-size: 0.8rem; /* Reduz o tamanho da descrição do card */
+    }
 }
